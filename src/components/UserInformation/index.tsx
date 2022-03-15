@@ -3,6 +3,8 @@ import React from "react"
 import styles from "./styles.module.css";
 import { MdMailOutline, MdLink, MdGroup } from "react-icons/md";
 
+import { Achievments } from '../Achievements'
+
 type User = {
   name: string,
   username: string,
@@ -38,6 +40,7 @@ export const UserInformation = ({ name, username, img, resume, contact, site, fo
         <p><span className={styles.number} >{followers}</span> Followers</p>
         <p><span className={styles.number} >{following}</span> Following</p>
       </div>
+      <Achievments items={[{ name: "Badge", img: "https://picsum.photos/500", url: "/" }]}  />
     </section>
   )
 }
