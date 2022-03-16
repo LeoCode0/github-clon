@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Header } from "../components/Header";
 import { UserInformation } from "../components/UserInformation";
+import { Repositories } from "../components/Repositories";
 
 const data = {
   name: "Leonardo Espinoza",
@@ -16,9 +17,10 @@ const data = {
 
 export const Profile = () => {
   return (
-    <div>
+    <>
       <Header />
       <UserInformation {...data} /> 
-    </div>
+      <Repositories data={[{ name: "github_clon", visibility: "public", description: "Github clon", languages_url:"https://", updated_at:"2022" }]}  />
+    </>
   )
 }
