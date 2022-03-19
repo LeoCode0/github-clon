@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Header } from "../components/Header";
 import { UserInformation } from "../components/UserInformation";
+import { Tabs } from "../components/Tabs";
 import { Filters } from "../components/Filters";
 import { Repositories } from "../components/Repositories";
 
@@ -21,6 +22,7 @@ export const Profile = () => {
     <>
       <Header />
       <UserInformation {...data} /> 
+      <Tabs />
       <Filters />
       <Repositories data={[{ name: "github_clon", visibility: "public", description: "Github clon", languages_url:"https://", updated_at:"2022" }]}  />
     </>
