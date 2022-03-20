@@ -10,4 +10,12 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  background: black;
+  color: #fff;
+  padding: 10px;
+}
+
+button {
+  border: 0;
+  background: transparent;
 }
