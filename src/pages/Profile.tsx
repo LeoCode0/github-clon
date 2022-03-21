@@ -10,12 +10,17 @@ const data = {
   name: "Leonardo Espinoza",
   username: "LeoCode0",
   img: "https://picsum.photos/300",
-  resume: "I have 4 dogs",
+  resume: "I'm making a Github clon!",
   contact: "contacto@leocode0.dev",
   site: "https://leocode0.dev",
   followers: 10,
   following: 16
 }
+
+const dataRepositories = [
+  { name: "github_clon", visibility: "public", description: "Github clon", languages_url:"https://", updated_at:"2022" },
+  { name: "github_clon", visibility: "public", description: "Github clon", languages_url:"https://", updated_at:"2022" },
+]
 
 export const Profile = () => {
   return (
@@ -24,7 +29,7 @@ export const Profile = () => {
       <UserInformation {...data} /> 
       <Tabs />
       <Filters />
-      <Repositories data={[{ name: "github_clon", visibility: "public", description: "Github clon", languages_url:"https://", updated_at:"2022" }]}  />
+      <Repositories data={dataRepositories}  />
     </>
   )
 }
