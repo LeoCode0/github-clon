@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { DefinePlugin } = require("webpack");
+require("dotenv").config({ path: "./.env" });
 
 module.exports = {
   entry: "./src/index.js",
@@ -65,6 +67,9 @@ module.exports = {
       chunkFilename: "[name].css",
     }),
     new CleanWebpackPlugin(),
+    new DefinePlugin({
+      "process.env": JSON.stringify(process.env),
+    }),
   ],
 
   optimization: {
