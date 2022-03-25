@@ -1,3 +1,13 @@
+:root {
+  --gray-color: rgba(241, 247, 253, 0.1);
+  --gray-light-color: #8e969f;
+  --blue-color: #56a5ff;
+  --green-color: #2d9d42;
+  --dark-color: #20242b;
+  --principal-text-color: #cbd3db;
+  --border-gray: #323840;
+}
+
 * {
   padding: 0;
   margin: 0;
