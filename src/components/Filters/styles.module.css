@@ -9,7 +9,7 @@
   width: 100%;
   border-radius: 5px;
   padding: 5px;
-  border: 1px solid gray;
+  border: 1px solid var(--border-gray);
   font-size: 1.6rem;
 }
 
@@ -24,7 +24,7 @@
   padding: 10px;
   margin-right: 5px;
   font-size: 1.6rem;
-  border: 1px solid gray;
+  border: 1px solid var(--gray-color);
   border-radius: 5px;
-  background-color: black;
+  background-color: var(--dark-color);
 }
