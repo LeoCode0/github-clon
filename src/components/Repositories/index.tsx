@@ -17,15 +17,15 @@ type RepositoriesProps = {
   languages: {
     nodes: Array<LanguesProps>
   },
-  updatedAt: string,
+  pushedAt: string,
   id: string
 }
 
-const Repository = ({ name, visibility, description, updatedAt, languages }: RepositoriesProps) => (
+const Repository = ({ name, visibility, description, pushedAt, languages }: RepositoriesProps) => (
   <li className={styles.item} >
     <div className={styles.header} >
-      <a href="/" className={styles.link} >{name}</a>
-      <span className={styles.visibility} >{visibility}</span>
+      <a href={`/${name}`} className={styles.link} >{name}</a>
+      <span className={styles.visibility} >{visibility.toLowerCase()}</span>
     </div>
     <p className={styles.description}>{description}</p>
     <div className={styles.footer} >
@@ -33,7 +33,7 @@ const Repository = ({ name, visibility, description, updatedAt, languages }: Rep
         languages.nodes.map(language => <span key={language.id}>{language.name}</span> )
       }
       <p className={styles.update} >
-        {getDaysAgo(updatedAt, Date.now())}
+        {getDaysAgo(pushedAt, Date.now())}
       </p>
     </div>
   </li>

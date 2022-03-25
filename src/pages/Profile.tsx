@@ -58,7 +58,7 @@ interface Repositories {
         description: string,
         name: string,
         url: string,
-        updatedAt: string,
+        pushedAt: string,
         visibility: string,
         languages: {
           nodes: {
@@ -77,8 +77,9 @@ const REPOSITORIES = gql`
   viewer {
     repositories(
       privacy: PUBLIC
-      orderBy: {field: UPDATED_AT, direction: DESC}
+      orderBy: {field: PUSHED_AT, direction: DESC}
       first: 10
+      ownerAffiliations: OWNER
     ) {
       edges {
         node {
@@ -86,7 +87,7 @@ const REPOSITORIES = gql`
           description
           name
           url
-          updatedAt
+          pushedAt
           visibility
           languages(first: 1, orderBy: {field: SIZE, direction: DESC}) {
             nodes {
@@ -111,6 +112,7 @@ export const Profile = () => {
   }
 
   if(userData && userRepositories){
+    console.log(userRepositories)
     return (
       <>
         <Header />
