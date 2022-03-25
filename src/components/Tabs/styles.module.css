@@ -1,14 +1,14 @@
 .nav {
   width: 100%;
   overflow-x: scroll;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--border-gray);
   margin: 15px 0 0;
   padding-bottom: 5px;
 }
 
 .link {
   text-decoration: none;
-  color: white;
+  color: var(--principal-text-color);
   font-size: 1.6rem;
   padding: 10px 20px;
 }
